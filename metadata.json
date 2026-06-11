@@ -1,0 +1,6 @@
+{
+  "name": "Patent EvidenceFlow",
+  "description": "A patent risk assessment workbench for managing assessment workpapers, review queues, and export delivery packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./utilities.css";
+
+/* ==========================================================================
+   Tailwind V4 Theme Customizations - Connected directly to --pef-* Design Tokens
+   ========================================================================== */
+@theme {
+  /* Font Family Mappings */
+  --font-sans: var(--pef-font-sans);
+  --font-mono: var(--pef-font-mono);
+
+  /* Color System Mappings */
+  --color-border: rgb(var(--pef-border));
+  --color-border-strong: rgb(var(--pef-border-strong));
+  --color-divider: rgb(var(--pef-divider));
+  --color-focus-ring: rgb(var(--pef-focus-ring));
+  
+  --color-bg-page: rgb(var(--pef-bg-page));
+  --color-bg-card: rgb(var(--pef-bg-card));
+  --color-bg-panel: rgb(var(--pef-bg-panel));
+  --color-bg-elevated: rgb(var(--pef-bg-elevated));
+  --color-bg-canvas: rgb(var(--pef-bg-canvas));
+  
+  --color-text-primary: rgb(var(--pef-text-primary));
+  --color-text-secondary: rgb(var(--pef-text-secondary));
+  --color-text-tertiary: rgb(var(--pef-text-tertiary));
+  --color-text-disabled: rgb(var(--pef-text-disabled));
+  --color-text-inverse: rgb(var(--pef-text-inverse));
+
+  --color-brand: rgb(var(--pef-brand));
+  --color-brand-hover: rgb(var(--pef-brand-hover));
+  --color-brand-active: rgb(var(--pef-brand-active));
+
+  --color-success: rgb(var(--pef-success));
+  --color-success-bg: rgba(var(--pef-success), 0.08);
+  --color-success-border: rgba(var(--pef-success), 0.25);
+
+  --color-warning: rgb(var(--pef-warning));
+  --color-warning-bg: rgba(var(--pef-warning), 0.08);
+  --color-warning-border: rgba(var(--pef-warning), 0.25);
+
+  --color-error: rgb(var(--pef-error));
+  --color-error-bg: rgba(var(--pef-error), 0.08);
+  --color-error-border: rgba(var(--pef-error), 0.25);
+
+  --color-info: rgb(var(--pef-info));
+  --color-info-bg: rgba(var(--pef-info), 0.08);
+  --color-info-border: rgba(var(--pef-info), 0.25);
+
+  /* Patent Shell Custom Bindings */
+  --color-sidebar-bg: var(--pef-shell-sidebar-bg);
+  --color-sidebar-border: var(--pef-shell-sidebar-border);
+  --color-sidebar-text: var(--pef-shell-sidebar-text);
+  --color-sidebar-text-muted: var(--pef-shell-sidebar-text-muted);
+  --color-sidebar-active-bg: var(--pef-shell-sidebar-active-bg);
+  --color-sidebar-hover-bg: var(--pef-shell-sidebar-hover-bg);
+
+  /* Border Radius */
+  --radius-sm: var(--pef-radius-sm);
+  --radius-md: var(--pef-radius-md);
+  --radius-lg: var(--pef-radius-lg);
+  --radius-control: var(--pef-radius-control);
+  --radius-card: var(--pef-radius-card);
+
+  /* Shadow Sizes */
+  --shadow-sm: var(--pef-shadow-card);
+  --shadow-card: var(--pef-shadow-card);
+  --shadow-overlay: var(--pef-shadow-overlay);
+
+  /* Transition & Animation */
+  --animate-duration-rapid: var(--pef-motion-normal);
+}
+
+/* ==========================================================================
+   Global Normalization & Accessibility Focus
+   ========================================================================== */
+@layer base {
+  body {
+    background-color: var(--pef-shell-content-bg);
+    color: rgb(var(--pef-text-primary));
+    font-family: var(--pef-font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Keyboard focus states */
+  *:focus-visible {
+    outline: 2px solid rgb(var(--pef-focus-ring));
+    outline-offset: 2px;
+  }
+}
